@@ -32,15 +32,15 @@
             <div class="form-group">
                 <label>Bike Model</label>
                   <label for="sel1">Select list:</label>
-                        <select :disabled="initialDetail" v-model="user.bikeModal"  placeholder="Bikes"  class="form-control" id="sel1" name="bike">
-                            <option   v-bind:value="item" v-for="(item, index) in bikesInfo.bikes" :key="index" v-validate="'required'" >{{item.name}}</option>
+                        <select :disabled="initialDetail" v-model="user.bikeModal"  placeholder="Bikes"  class="form-control" id="sel1">
+                            <option   v-bind:value="item" v-for="(item, index) in bikesInfo.bikes" :key="index" v-validate="'required'"  name="bike">{{item.name}}</option>
                         </select>
 
                 <!-- <input :disabled="initialDetail" v-model="user.bikeModal" name="bike" placeholder="dragons" v-validate="'required'" type="text" class="form-control"> -->
                 <span  class="text-danger" v-show="errors.has('bike')">{{ errors.first('bike') }}</span>
             </div>
             <div v-if="!initialDetail">
-                <button class="btn btn-primary" @click="userHandle">Create Account</button>
+                <button :disabled="!user.bikeModal"  class="btn btn-primary" @click="userHandle">Create Account</button>
             </div>
             
     </div>

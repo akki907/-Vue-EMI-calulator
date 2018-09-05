@@ -2,7 +2,7 @@
     <div class=" marginTop" >
         <div class="page-header">
             <h1>
-                User Detail
+                EMI Calculator
             </h1>
         </div>
         <hr>

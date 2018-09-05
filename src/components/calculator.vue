@@ -49,8 +49,8 @@
       <h1>Calculated Amount</h1>
       <hr>
       <p>Loan Amount : {{sliderCustomzie.val}}</p>
-      <p>Total Amount : {{calculateData}}</p>
-      <p>Loan EMI : {{calculateData / tenureCustomzie.val}}</p>
+      <p>Loan EMI : {{calculateData}}</p>
+      <!-- <p>Total Amount : {{sliderCustomzie.val + }}</p> -->
   
       <p>Total Interest Payable : {{calculateData * tenureCustomzie.val - sliderCustomzie.val}}</p>
     </div>
